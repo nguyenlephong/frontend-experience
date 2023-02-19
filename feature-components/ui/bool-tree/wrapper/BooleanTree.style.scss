@@ -1,0 +1,165 @@
+@import "./color.style";
+@import "./fonts.style";
+@import "./common.style";
+
+.page {
+  padding: 24px;
+}
+
+.wrapper-condition-block {
+  background: $grey-8;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.json-viewer {
+  white-space: pre-wrap;
+  background: $grey-8;
+  padding: 8px;
+  max-height: 420px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.tree-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.btn-small-and {
+  cursor: pointer;
+  padding: 3px 8px;
+  background: $blue-b50;
+  border-radius: 4px;
+
+  @include font-12;
+  text-transform: uppercase;
+  color: $grey-9;
+  font-weight: bold;
+
+}
+
+.btn-small-or {
+  cursor: pointer;
+  padding: 3px 8px;
+  background: $orange-2;
+  border-radius: 4px;
+
+  @include font-12;
+  text-transform: uppercase;
+  color: $grey-9;
+  font-weight: bold;
+
+}
+
+.btn-small-copy {
+  display: flex;
+  align-content: center;
+}
+
+.btn-small-delete {
+  display: flex;
+  align-content: center;
+}
+
+.btn-small-filter {
+  min-width: 70px;
+  cursor: pointer;
+  padding: 3px 8px;
+  background: $grey-3;
+  border-radius: 4px;
+
+  @include font-12;
+  text-transform: uppercase;
+  color: $grey-9;
+  font-weight: bold;
+}
+
+.condition-block {
+  background: $grey-9;
+  border-radius: 4px;
+
+  padding: 12px;
+  height: 64px;
+
+  @include wrapper_row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.wrapper-item-condition {
+  margin-bottom: 12px;
+}
+
+.btn-root {
+  width: 64px;
+  z-index: 10;
+  margin: 12px 12px 6px;
+  background: $blue-b50;
+
+  &.and {
+    background: $blue-b50;
+  }
+
+  &.or {
+    background: $yellow-y40;
+  }
+
+  &.btn-small-and {
+    background: $blue-b50;
+    width: unset;
+  }
+
+  &.btn-small-or {
+    width: unset;
+  }
+}
+
+.left-line {
+  background: $blue-1;
+  border-radius: 4px 0 0 4px;
+  width: 4px;
+  height: 64px;
+
+  &.and {
+    background: $blue-1;
+  }
+
+  &.or {
+    background: $orange-1;
+  }
+}
+
+.btn-type {
+  font-weight: bold;
+  cursor: pointer;
+
+  &.and-outline {
+    color: $blue-1;
+  }
+
+  &.or-outline {
+    color: $orange-1;
+  }
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.tree-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.fw {
+  width: 100%;
+}
