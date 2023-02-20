@@ -1,5 +1,5 @@
 export const ATTR_TEMPLATE_CONFIGS = {
-  TINY_EDITOR_KEY: "3ti6lf1kghzyrs66kit97o9w0nf3a9hty5f98hb2cnpch3z6"
+  TINY_EDITOR_KEY: "wzqfwf7rhjpzaiuy31b1jz5t8r7kinw4q3osnkh9n7ojosem"
 }
 
 export const cssForContentOfEditor = `

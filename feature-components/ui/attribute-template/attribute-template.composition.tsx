@@ -212,7 +212,7 @@ export const BasicAttributeTemplate = () => {
         onBlur={emptyFunc}
         onChange={emptyFunc}
         onFocus={emptyFunc}
-        tinyKey={"3ti6lf1kghzyrs66kit97o9w0nf3a9hty5f98hb2cnpch3z6"}/>
+        tinyKey={"wzqfwf7rhjpzaiuy31b1jz5t8r7kinw4q3osnkh9n7ojosem"}/>
     </AttributeTemplate>
   );
 }

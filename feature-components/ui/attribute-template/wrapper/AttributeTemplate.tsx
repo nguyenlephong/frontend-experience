@@ -194,6 +194,7 @@ const AttributeTemplate = (props: AttributeTemplatePropType) => {
 
             {state.enabled && state.opts.length > 0 && (
               <Col xs={24}>
+                {/* @ts-ignore*/}
                 <Editor
                   disabled={props.disabled}
                   id={props.id}
