@@ -6,26 +6,10 @@ import {Editor} from '@tinymce/tinymce-react';
 import {AttributeIconClose, getOptionsSlashCommands, trackTinymceLoadError} from "./AttributeTemplate.service";
 import {
   ATTR_TEMPLATE_CONFIGS,
-  AttributeItem,
+  AttributeItem, AttributeTemplatePropType,
   AttrTemplateState,
   cssForContentOfEditor
 } from "./AttibuteTemplate.constant";
-
-type AttributeTemplatePropType = {
-  disabled: any;
-  listOfAttributes: any[];
-  id: string;
-  name?: string;
-  tinyKey: string;
-  autoFocus: boolean | null;
-  onChange: (v: any, e: any) => void;
-  onFocus: (e: any) => void;
-  isPlainText?: boolean;
-  defaultValue?: string | any;
-  config: any;
-  height?: number;
-  onBlur(convertHtmlToTemplate1: string, convertHtmlToPlainText1: string): void;
-}
 
 const AttributeTemplate = (props: AttributeTemplatePropType) => {
   const editorRef = useRef();

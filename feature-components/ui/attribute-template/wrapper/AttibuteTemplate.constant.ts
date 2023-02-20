@@ -135,3 +135,19 @@ export type AttributeItem = {
   category: string;
   value: string;
 }
+
+export type AttributeTemplatePropType = {
+  disabled: any;
+  listOfAttributes: any[];
+  id: string;
+  name?: string;
+  tinyKey: string;
+  autoFocus: boolean | null;
+  onChange: (v: any, e: any) => void;
+  onFocus: (e: any) => void;
+  isPlainText?: boolean;
+  defaultValue?: string | any;
+  config: any;
+  height?: number;
+  onBlur(convertHtmlToTemplate1: string, convertHtmlToPlainText1: string): void;
+}
