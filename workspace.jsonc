@@ -30,7 +30,9 @@
     "defaultScope": "nguyenlephong.feature-components"
   },
   "teambit.component/issues": {
-    "ignoreIssues": ["MissingDependenciesOnFs"]
+    "ignoreIssues": [
+      "MissingDependenciesOnFs"
+    ]
   },
   /**
    * main configuration for component dependency resolution.

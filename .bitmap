@@ -9,6 +9,18 @@
  */
 
 {
+    "ui/attribute-template": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "feature-components/ui/attribute-template",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "ui/bool-tree": {
         "scope": "nguyenlephong.feature-components",
         "version": "0.0.5",
