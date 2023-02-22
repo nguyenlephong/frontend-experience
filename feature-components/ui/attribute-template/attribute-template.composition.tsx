@@ -152,8 +152,8 @@ export const BasicAttributeTemplate = () => {
           autosave_restore_when_empty: false,
           autosave_retention: "2m",
           image_advtab: true,
-          link_list: [{ title: "PrimeData.AI", value: "https://dev.primedata.ai" }],
-          image_list: [{ title: "PrimeData.AI", value: "https://dev.primedata.ai" }],
+          link_list: [{ title: "CV", value: "https://nguyenlephong.github.io" }],
+          image_list: [{ title: "CV", value: "https://nguyenlephong.github.io" }],
           importcss_append: true,
           //@ts-ignore
           file_picker_callback: function (callback, _value, meta) {

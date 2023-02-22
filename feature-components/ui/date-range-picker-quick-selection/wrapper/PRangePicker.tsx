@@ -38,11 +38,11 @@ const PRangePicker = (props: PRangePickerPropType) => {
           style={{
             border: "1px solid #d6d6d7",
             width: "100%",
+            cursor: "pointer",
             padding: "4px 12px"
           }}
           onClick={() => setOpen(true)}>
           {getTextDateRender(props.primeProps)}
-
           <CalendarBlank size={16} weight="light"/>
         </div>
 
@@ -60,7 +60,7 @@ const PRangePicker = (props: PRangePickerPropType) => {
           getPopupContainer={() => document.getElementById(uuid)}
           renderExtraFooter={() => {
             return (
-              <Space size={16}>
+              <Space size={8} style={{padding: "8px 12px"}}>
                 <Button onClick={onBlurDateRange} className={"btn-outline default"}>
                   Close
                 </Button>
