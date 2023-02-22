@@ -21,5 +21,11 @@
         "mainFile": "index.ts",
         "rootDir": "feature-components/ui/bool-tree"
     },
+    "ui/date-range-picker-quick-selection": {
+        "scope": "nguyenlephong.feature-components",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "feature-components/ui/date-range-picker-quick-selection"
+    },
     "$schema-version": "15.0.0"
 }

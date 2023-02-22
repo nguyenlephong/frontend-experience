@@ -1,0 +1,37 @@
+.page {
+  padding: 24px;
+
+  .container {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid #d6d6d7;
+    background: #ffffff;
+  }
+}
+
+.json-viewer {
+  white-space: pre-wrap;
+  background: #fafafa;
+  padding: 8px;
+  max-height: 420px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.cdp__date-picker {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #d6d6d7;
+}
+
+.input-style {
+  width: 100%;
+}
+
+.lbf {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #545663;
+  margin-bottom: 6px;
+}
