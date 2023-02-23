@@ -1,0 +1,52 @@
+---
+description: A SelectGroupBox component.
+---
+
+import { SelectGroupBox } from './select-group-box';
+import PSelectGroupBox from "./wrapper/PSelectGroupBox";
+
+A component that does something special and renders a select box with option tree group in a div.
+
+### Component usage
+```js
+<SelectGroupBox>
+  <PSelectGroupBox
+    label={"Output"}
+    isTranslate={true}
+    disabled={false}
+    onChange={(opt: any) => console.log(opt)}
+    value={preview.value}
+    options={[
+      {
+        label: "preview.numeric",
+        value: "numeric",
+        options: [
+          {
+            label: "preview.floating_point",
+            value: "floating_point",
+            preview: "27,17",
+            description: "preview.floating_point_desc"
+          },
+          {
+            label: "preview.integer",
+            value: "integer",
+            preview: "27",
+            description: "preview.integer_desc"
+          },
+          {
+            label: "preview.percent",
+            value: "percent",
+            preview: "50%",
+            description: "preview.percent_desc"
+          },
+          {
+            label: "preview.financial",
+            value: "financial",
+            preview: "100 VND",
+            description: "preview.financial_desc"
+          }
+        ]
+      }
+    ]}/>
+</SelectGroupBox>
+```

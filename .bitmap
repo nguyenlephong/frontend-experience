@@ -11,7 +11,7 @@
 {
     "ui/attribute-template": {
         "scope": "nguyenlephong.feature-components",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "feature-components/ui/attribute-template"
     },
@@ -23,9 +23,15 @@
     },
     "ui/date-range-picker-quick-selection": {
         "scope": "nguyenlephong.feature-components",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "feature-components/ui/date-range-picker-quick-selection"
+    },
+    "ui/select-group-box": {
+        "scope": "nguyenlephong.feature-components",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "feature-components/ui/select-group-box"
     },
     "$schema-version": "15.0.0"
 }
