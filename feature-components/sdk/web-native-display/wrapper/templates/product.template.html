@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Template</title>
+<!--Your setup head of site-->
+<!--Your config styling-->
+</head>
+<body>
+<div id="template-render">
+
+</div>
+<!--Main JS SDK-->
+<script>
+
+  /** You can customize UI which you want to render for each item here*/
+  function renderUI(items) {
+    // reset content if change
+    document.getElementById("template-render").innerHTML = ``;
+
+    items.map((item) => {
+      const node = document.createElement("div");
+      node.setAttribute("class", "item");
+
+      node.innerHTML = `<div>Product ID: ${item.id}</div>`
+      // append html element into parent node
+      document.getElementById("template-render").appendChild(node);
+    })
+
+  }
+
+  /** You can handle your logic here*/
+  function handleReceiveData(payload) {
+    renderUI(payload.data)
+  }
+
+  function listener() {
+    // listener message with type is "transport" from JS SDK to receive personalize payload
+    window.addEventListener("message", function (event) {
+      // let origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
+      // if (origin !== /*the container's domain url*/) return;
+
+      if (typeof event.data === "object") {
+        const eventData = event.data;
+        switch (eventData.type) {
+          case "transport":
+            console.log("Message receive from SDK to builder template (only object): ", eventData);
+            return handleReceiveData(eventData)
+
+          default:
+            return "null";
+        }
+      }
+
+      console.log("Message receive from SDK to builder template (any data): ", event.data);
+    });
+  }
+
+  listener()
+</script>
+
+<!--Your script-->
+</body>
+</html>

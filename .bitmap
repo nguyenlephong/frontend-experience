@@ -9,6 +9,12 @@
  */
 
 {
+    "sdk/web-native-display": {
+        "scope": "nguyenlephong.feature-components",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "feature-components/sdk/web-native-display"
+    },
     "ui/attribute-template": {
         "scope": "nguyenlephong.feature-components",
         "version": "0.0.4",
