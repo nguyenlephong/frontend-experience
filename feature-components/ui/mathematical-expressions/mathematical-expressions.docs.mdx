@@ -1,0 +1,38 @@
+---
+description: A MathematicalExpressions component.
+---
+
+import { MathematicalExpressions } from './mathematical-expressions';
+import {HTML5Backend} from "react-dnd-html5-backend";
+import {DndProvider} from "react-dnd";
+import FormulaBuilderBlock from "./wrapper/FormulaBuilderBlock";
+import "./wrapper/FormulaBuilder.style.scss";
+import {evaluateFormula} from "./wrapper/Service";
+import {Row, Col} from "antd"
+
+A component that does something special and renders text in a div.
+
+### Component usage
+```js
+<MathematicalExpressions>
+  <div className={"wrapper-condition-block"}>
+    <Row gutter={[12, 12]}>
+      <DndProvider backend={HTML5Backend}>
+        <FormulaBuilderBlock
+          disabled={false}
+          data={[]}
+          alias={"ptrait"}
+          pTraitOptions={[]}
+          traitOptions={[]}
+          functionOptions={[]}
+          updateDataFormula={(v: any[]) => console({formula: v})}
+        />
+      </DndProvider>
+
+      <Col xs={24}>
+        <div className="json-viewer">{JSON.stringify(evaluate, null, 2)}</div>
+      </Col>
+    </Row>
+  </div>
+</MathematicalExpressions>
+```

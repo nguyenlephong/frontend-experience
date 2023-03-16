@@ -1,0 +1,728 @@
+@import "./color.style";
+@import "./fonts.style";
+@import "./common.style";
+
+$cdp-metrics-builder-page: cdp-metrics-builder-campaign;
+
+$screen_1920: 1920px;
+$screen_1600: 1600px;
+$screen_1440: 1440px;
+$screen_1368: 1368px;
+$screen_1268: 1268px;
+$screen_1024: 1024px;
+
+.#{$cdp-metrics-builder-page} {
+  @include wrapper_row;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  padding: 24px;
+
+  .empty-metric-block {
+    background: $grey-8;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    @include font-16;
+    color: $grey-3;
+  }
+
+  &__tab-content-wrapper {
+    border: 1px solid #f0f0f0;
+    padding: 24px;
+  }
+
+  .#{$cdp-metrics-builder-page}__wrapper {
+    max-width: 75vw;
+    min-width: 75vw;
+    width: 100%;
+
+    .#{$cdp-metrics-builder-page}__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      .#{$cdp-metrics-builder-page}__btn-dropdown {
+        background: $grey-9;
+        box-sizing: border-box;
+        border-radius: 8px;
+        height: 40px;
+        width: 100%;
+
+        .#{$cdp-metrics-builder-page}__btn-dropdown-label {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          align-items: center;
+          width: 100%;
+
+          .#{$cdp-metrics-builder-page}__label {
+            @include font-16;
+            color: $grey-2;
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: left;
+            font-weight: normal;
+
+            &--all {
+              color: $grey-5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+    background: $grey-9;
+    border: 1px solid $grey-5;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 72vw;
+    height: calc(100vh - 60px - 128px);
+    padding: 24px;
+    position: relative;
+    overflow: auto;
+
+    .content {
+      .#{$cdp-metrics-builder-page}__header {
+        @include wrapper_row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        .title {
+          @include font-16;
+          font-weight: bold;
+          color: $grey-1;
+        }
+      }
+
+      .#{$cdp-metrics-builder-page}__base-on-block {
+        background: $grey-8;
+        border-radius: 4px;
+        padding: 0 24px;
+      }
+
+      .format-output-block {
+        background: $grey-8;
+        border-radius: 4px;
+        text-align: center;
+
+        .result {
+          @include font-36;
+          font-weight: bold;
+          color: $grey-6;
+          padding: 8px 100px;
+        }
+
+        &--active {
+          background: #e2f2fe;
+
+          .result {
+            color: #8ccdf8;
+          }
+        }
+      }
+
+      .output-format-field {
+        width: 50%;
+      }
+
+      .ptrait-format-output-block {
+        background: $grey-8;
+        border-radius: 4px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .result {
+          @include font-36;
+          font-weight: bold;
+          color: $grey-6;
+          padding: 8px 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen_1368) {
+  .#{$cdp-metrics-builder-page} {
+    .#{$cdp-metrics-builder-page}__wrapper {
+      width: 100%;
+      max-width: 85vw;
+    }
+  }
+}
+
+#create-metric-builder {
+  background: $grey-8;
+  padding: 64px 24px;
+}
+
+.title-field {
+  @include font-16;
+  color: $grey-1;
+}
+
+.metric-condition-block {
+  background: $grey-8;
+  border-radius: 4px;
+  padding: 16px;
+
+  .tree-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .btn-small-and {
+    cursor: pointer;
+    padding: 3px 8px;
+    background: $grey-6;
+    border-radius: 4px;
+
+    @include font-12;
+    text-transform: uppercase;
+    color: $grey-9;
+    font-weight: bold;
+
+  }
+
+  .btn-small-or {
+    cursor: pointer;
+    padding: 3px 8px;
+    background: $orange-2;
+    border-radius: 4px;
+
+    @include font-12;
+    text-transform: uppercase;
+    color: $grey-9;
+    font-weight: bold;
+
+  }
+
+  .btn-small-copy {
+    display: flex;
+    align-content: center;
+  }
+
+  .btn-small-delete {
+    display: flex;
+    align-content: center;
+  }
+
+  .btn-small-filter {
+    min-width: 70px;
+    cursor: pointer;
+    padding: 3px 8px;
+    background: $grey-3;
+    border-radius: 4px;
+
+    @include font-12;
+    text-transform: uppercase;
+    color: $grey-9;
+    font-weight: bold;
+  }
+
+  .condition-block {
+    background: $grey-9;
+    border-radius: 4px;
+
+    padding: 12px;
+
+    @include wrapper_row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .metric-item-condition {
+    margin-bottom: 12px;
+  }
+
+  .btn-root {
+    width: 64px;
+    z-index: 10;
+    margin: 12px;
+    margin-bottom: 6px;
+    background: $blue-b50;
+
+    &.and {
+      background: $blue-b50;
+    }
+
+    &.or {
+      background: $yellow-y40;
+    }
+
+    &.btn-small-and {
+      background: $blue-b50;
+      width: unset;
+    }
+
+    &.btn-small-or {
+      width: unset;
+    }
+  }
+}
+
+.btn-action-right {
+  .btn-root {
+    &.btn-small-and {
+      margin: unset;
+    }
+
+    &.btn-small-or {
+      margin: unset;
+    }
+  }
+}
+
+#ic-arrow-down-and {
+  @include f-center;
+
+  path {
+    fill: $blue-5;
+  }
+}
+
+#ic-arrow-down-or {
+  @include f-center;
+
+  path {
+    fill: $orange-5;
+  }
+}
+
+.left-line {
+  background: $blue-1;
+  border-radius: 4px 0 0 4px;
+  width: 4px;
+  height: 64px;
+
+  &.and {
+    background: $blue-1;
+  }
+
+  &.or {
+    background: $orange-1;
+  }
+}
+
+.btn-type {
+  font-weight: bold;
+  cursor: pointer;
+
+  &.and-outline {
+    color: $blue-1;
+  }
+
+  &.or-outline {
+    color: $orange-1;
+  }
+}
+
+
+.operator-atomic-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $green-g10;
+  //border: 1px solid $grey-6;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    border: 1px solid $blue-2;
+  }
+
+  &.no-border {
+    border: unset;
+  }
+}
+
+.btn-add-new-operator {
+  //width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 16px;
+  background: $green-g50;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+  color: $green-g5;
+  @include font-16;
+  font-weight: 500;
+
+  &:hover {
+    border: 1px solid $blue-2;
+  }
+
+  #ic-add-operator {
+    path {
+      fill: $primary-3;
+    }
+  }
+}
+
+.operator-popup {
+  width: 200px;
+
+  background: $grey-9;
+  border: 1px solid $grey-4;
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+
+  #ic-close {
+    path {
+      fill: $text-color-4;
+    }
+  }
+
+  .ic-parentheses {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+
+    &.left {
+      width: 15px;
+    }
+
+    &.right {
+      width: 16px;
+    }
+  }
+
+  .p-title {
+    @include wrapper_row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    padding: 12px 20px;
+    background: $grey-8;
+    border-radius: 7px 7px 0 0;
+
+    color: $grey-2;
+    @include font-16;
+    font-weight: bold;
+  }
+
+  .p-content {
+    .o-item {
+      @include wrapper_row;
+      padding: 6px 12px;
+      cursor: pointer;
+      align-items: center;
+
+      &:hover {
+        background: $text-hover-color-1;
+      }
+
+      .o-name {
+        @include font-16;
+        color: $grey-1;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .p-footer {
+    @include wrapper_row;
+    border-radius: 0 0 7px 7px;
+    border-top: 1px solid $grey-6;
+    padding: 12px 12px;
+    align-content: center;
+
+    &:hover {
+      background: $text-hover-color-1;
+      cursor: pointer;
+    }
+
+    .o-name {
+      @include font-16;
+      color: $grey-1;
+      margin-left: 12px;
+    }
+  }
+}
+
+.ul-wrapper {
+  background: $grey-9;
+  border: 1px solid $grey-4;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 8px 0;
+
+  .li {
+    cursor: pointer;
+
+    padding: 9px 15px;
+
+    &:hover {
+      background: $text-hover-color-1;
+    }
+
+    .text {
+      @include font-16;
+      color: $grey-1;
+    }
+  }
+}
+
+.col-drag {
+  border-radius: 8px;
+  background: transparent;
+}
+
+.ptrait-preview-list {
+  max-height: 420px;
+  overflow: auto;
+  .item-wrapper {
+    @include f-center;
+    padding: 6px 0;
+  }
+
+  .item-details {
+    margin-left: 4px;
+  }
+
+  .item-title {
+    @include font-16;
+    font-weight: bold;
+    color: $grey-2;
+  }
+
+  .item-description {
+    @include font-12;
+    color: $grey-4;
+  }
+}
+
+#ptrait-spin-wrapper,
+#metric-spin-wrapper {
+  overflow: auto;
+  height: 100%;
+}
+
+.formula-builder-block__wrapper {
+  .form-title {
+    font-weight: 600;
+    @include font-14;
+    color: $neutral-n90;
+
+    &.uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-desc {
+    @include font-12;
+    color: $neutral-n70;
+  }
+
+
+  .form-action-bar {
+    padding-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    .btn-s {
+      padding: 4px 8px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .form-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    .formula-block {
+      width: 100%;
+      padding: 12px;
+      max-height: 820px;
+      min-height: 320px;
+      overflow: auto;
+      background: $neutral-n20;
+      border-radius: 8px;
+    }
+  }
+}
+
+.format-output-value {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.p-collapse-formula-p-trait {
+  background: transparent;
+
+  .p-panel .ant-collapse-header {
+    background: transparent !important;
+    padding-left: unset;
+
+    .ant-collapse-arrow {
+      left: 0;
+    }
+  }
+
+  .ant-collapse-content {
+    background: transparent;
+
+    .ant-collapse-content-box {
+      padding: unset;
+    }
+  }
+}
+
+.btn-action-right {
+  .btn-small-and {
+    padding: 2px 4px;
+    background: $green-g50;
+    color: $neutral-n10;
+    @include font-12;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .btn-small-or {
+    padding: 2px 4px;
+    background: $yellow-y40;
+    color: $neutral-n10;
+    @include font-12;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .btn-small-empty {
+    padding: 2px 4px;
+    background: $neutral-n60;
+    color: $neutral-n10;
+    @include font-12;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+}
+
+.output-value {
+  width: 100%;
+  font-size: 24px;
+  color: $neutral-n60;
+}
+
+.p-Trait-preview-panel {
+  .block-type-and {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $green-g50;
+  }
+
+  .block-type-or {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $yellow-y50;
+  }
+}
+
+
+.wrapper-condition-block {
+  background: $neutral-n10;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+
+@mixin button-small {
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  color: $neutral-n10;
+}
+
+.btn-s {
+  @include button-small;
+  width: fit-content;
+  font-weight: bold;
+
+  &.orange {
+    background: $orange;
+  }
+
+  &.green {
+    background: $green_g50;
+  }
+
+  &.blue {
+    background: $blue-b50;
+  }
+
+  &.gray {
+    background: $neutral-n70;
+  }
+}
+
+
+.wrapper-item-input {
+  position: relative;
+
+  .suffix-wrapper {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid;
+    @include f-center;
+  }
+}
+
+
+.json-viewer {
+  white-space: pre-wrap;
+  background: $grey-8;
+  padding: 8px;
+  max-height: 420px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.unselected-text {
+  user-select: none;
+}

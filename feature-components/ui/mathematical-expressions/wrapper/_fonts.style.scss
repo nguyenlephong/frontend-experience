@@ -1,0 +1,132 @@
+$break-point-default: 1920px;
+
+/**
+ * font-size: 36px;
+ * line-height: 48px;
+ * (font-size / break-point-default) * 100 => 1.875vw
+ * (line-height / font-size) => 1.33em
+ */
+
+//36B
+$f36-font-size: 36px;
+$f36-line-height: 48px;
+//$f36-font-size: 1.875vw;
+//$f36-line-height: 1.33em;
+@mixin font-36 {
+  font-size: $f36-font-size;
+  line-height: $f36-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 36px;
+  }
+}
+
+//24B
+$f24-font-size: 24px;
+$f24-line-height: 32px;
+//$f24-font-size: 1.25vw;
+//$f24-line-height: 1.33em;
+@mixin font-24 {
+  font-size: $f24-font-size;
+  line-height: $f24-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 24px;
+  }
+}
+
+//20B
+$f20-font-size: 20px;
+$f20-line-height: 28px;
+//$f20-font-size: 1.041666667vw;
+//$f20-line-height: 1.3em;
+@mixin font-20 {
+  font-size: $f20-font-size;
+  line-height: $f20-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 20px;
+  }
+
+  //@media screen and (min-width: $hd_screen_minus_165) and (max-width: $hd_screen_plus_75) {
+  //  font-size: 22px;
+  //}
+}
+
+//18B
+$f18-font-size: 18px;
+$f18-line-height: 26px;
+//$f20-font-size: 1.041666667vw;
+//$f20-line-height: 1.3em;
+@mixin font-18 {
+  font-size: $f18-font-size;
+  line-height: $f18-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 18px;
+  }
+
+  //@media screen and (min-width: $hd_screen_minus_165) and (max-width: $hd_screen_plus_75) {
+  //  font-size: 20px;
+  //}
+}
+
+//16B1
+$f16-font-size: 16px;
+$f16-line-height: 24px;
+//$f16-font-size: 0.8333333333vw;
+//$f16-line-height: 1.375em;
+$f16-paragraph-spacing: 0.5em;
+@mixin font-16 {
+  font-size: $f16-font-size;
+  line-height: $f16-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 16px;
+  }
+  //
+  //@media screen and (min-width: $hd_screen_minus_165) and (max-width: $hd_screen_plus_75) {
+  //  font-size: 18px;
+  //}
+}
+
+//14B
+$f14-font-size: 14px;
+//$f14-font-size: 0.7291666667vw;
+$f14-line-height: 20px;
+@mixin font-14 {
+  font-size: $f14-font-size;
+  line-height: $f14-line-height;
+  @media screen and (min-width: 1921px) {
+    font-size: 14px;
+  }
+
+  //@media screen and (min-width: $hd_screen_minus_165) and (max-width: $hd_screen_plus_75) {
+  //  font-size: 16px;
+  //}
+}
+
+//12B-caps
+$f12-caps-font-size: 12px;
+//$f12-caps-font-size: 0.625vw;
+$f12-caps-line-height: 1.5em;
+$f12-caps-letter-spacing: 0.02em;
+@mixin font-12 {
+  font-size: $f12-caps-font-size;
+  line-height: $f12-caps-line-height;
+  letter-spacing: $f12-caps-letter-spacing;
+  @media screen and (min-width: 1921px) {
+    font-size: 12px;
+  }
+  //@media screen and (min-width: $hd_screen_minus_165) and (max-width: $hd_screen_plus_75) {
+  //  font-size: 14px;
+  //}
+}
+
+//11B-caps
+$f11-caps-font-size: 11px;
+$f11-caps-line-height: 1.125em;
+$f11-caps-letter-spacing: 0.03em;
+@mixin font-11 {
+  font-size: $f11-caps-font-size;
+  line-height: $f11-caps-line-height;
+  letter-spacing: $f11-caps-letter-spacing;
+  @media screen and (min-width: 1921px) {
+    font-size: 11px;
+  }
+}
